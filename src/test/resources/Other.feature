@@ -1,6 +1,6 @@
 Feature: Other things
 
-  We should do some other shit.
+  We should do some other stuff.
 
   Scenario: Doing stuff
     Given we feel like it

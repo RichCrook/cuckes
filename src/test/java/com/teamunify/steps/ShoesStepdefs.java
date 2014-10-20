@@ -6,27 +6,27 @@ import cucumber.api.java.en.When;
 import cucumber.api.java.en.And;
 import cucumber.api.PendingException;
 
-public class BoogersStepdefs {
-  boolean indexClean = false;
-  boolean boogers = false;
-  @Given("^my index finger is clean$")
-    public void index_finger_is_clean() throws Throwable {
-      indexClean = true;
+public class ShoesStepdefs {
+  boolean closetClean = false;
+  boolean shoes = false;
+  @Given("^my index closet is clean$")
+    public void closet_is_clean() throws Throwable {
+      closetClean = true;
     }
 
-  @And("^there are boogers in my nose$")
-    public void boogers_are_present() throws Throwable {
-      boogers = true;
+  @And("^there are shoes in my closet")
+    public void shoes_are_present() throws Throwable {
+      shoes = true;
     }
 
-  @When("^I stick my finger in my nose$")
-    public void insert_finger() {
-      System.out.println("Finger inserted");
+  @When("^I grab some shoes$")
+    public void grab_shoes() {
+      System.out.println("GHot some shoes");
     }
 
-  @Then("^I should obtain a booger$")
-    public void booger_is_obtained() {
-      throw new RuntimeException("Booger did not stick");
+  @Then("^I should obtain a shoe")
+    public void shoe_is_obtained() {
+      throw new RuntimeException("Was unable to grab shoe");
     }
 
   @Given("^we feel like it$")

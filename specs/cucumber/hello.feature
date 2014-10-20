@@ -1,5 +1,5 @@
 Feature: Bullshit
-  The index page says some bullshit
+  The index page says some stuff
 
   Scenario: Examining index page
     Given I am on the index page
