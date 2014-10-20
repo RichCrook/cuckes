@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title></title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script>
+        angular.module("theApp", []).
+                controller("myController", [ "$scope", function(s) {
+                    s.messageVisible = false;
+                    s.show = function() {
+                      s.messageVisible = true;
+                    };
+                    }]);
+    </script>
+</head>
+<body ng-app="theApp" ng-controller="myController">
+<form name="theForm">
+Name: <input name="Name" ng-model="name"><br/><button id="send_button" ng-click="show()">Send</button>
+</form>
+
+<p ng-show="messageVisible">
+    Hi {{name}}.
+</p>
+
+</body>
+</html>
